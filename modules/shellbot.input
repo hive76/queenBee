@@ -1,0 +1,5 @@
+NICK shellbotKyle2
+USER root +iw shellbotKyle2 :./shellbot.sh
+CAP REQ :account-notify extended-join
+JOIN #hive76bots
+WHO #hive76bots %na

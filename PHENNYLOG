@@ -1,0 +1,331 @@
+Import currentcolor.py
+medium .* <function lusers at 0x9231fb4>
+low QueenBee[,:] +(?i)help(?:[?!]+)?$ <function help at 0x93c6d14>
+high ^\.(tock)(?: +(.*))?$ <function tock at 0x91d148c>
+medium ^\.(tw)(?: +(.*))?$ <function twitter at 0x9314144>
+medium ^\.(twitter)(?: +(.*))?$ <function twitter at 0x9314144>
+low (.*) <function startup at 0x93c0e9c>
+low ^\.(beats)(?: +(.*))?$ <function beats at 0x91d11ec>
+medium ^\.(t)(?: +(.*))?$ <function f_time at 0x91d1d4c>
+medium ^\.(duck)(?: +(.*))?$ <function duck at 0x9314b54>
+medium ^\.(ddg)(?: +(.*))?$ <function duck at 0x9314b54>
+medium \.(seen)\b(?: +(?:(\S+)))? <function seen at 0x93c6224>
+low (.*) <function message at 0x93da64c>
+low ^\.(quit)(?: +(.*))?$ <function quit at 0x93da72c>
+low QueenBee[,:] +(reload) +(\S+)? <function f_reload at 0x93141ec>
+medium ^\.(mail)(?: +(.*))?$ <function MailingList at 0x93c0d84>
+medium QueenBee[,:] +(tell) +(\S+) (.*) <function f_remind at 0x93da5dc>
+medium QueenBee[,:] +(ask) +(\S+) (.*) <function f_remind at 0x93da5dc>
+medium \.(val)\b(?: +(?:(?i)(\S+)))? <function val at 0x93da10c>
+high ^\.(ngc)(?: +(.*))?$ <function ngc at 0x9314c34>
+medium ^\.(suggest)(?: +(.*))?$ <function suggest at 0x9314bc4>
+medium ^\.(py)(?: +(.*))?$ <function py at 0x93da02c>
+low QueenBee[,:] +(?:([a-z]{2}) +)?(?:([a-z]{2}|en-raw) +)?["“](.+?)["”]\? *$ <function tr at 0x91d1e64>
+medium ^\.(snippet)(?: +(.*))?$ <function snippet at 0x93daa04>
+medium ^\.(gcs)(?: +(.*))?$ <function gcs at 0x9314a74>
+medium ^\.(comp)(?: +(.*))?$ <function gcs at 0x9314a74>
+low \.join (#\S+)(?: *(\S+))? <function join at 0x93da6bc>
+low .*(http[s]?://[^<> "\x01]+)[,.]? <function noteuri at 0x923195c>
+low .* <function huserSend at 0x92394c4>
+low \.(msg)\b(?: +(?:(#?\S+) (.+)))? <function msg at 0x93da764>
+low ^\.(huser)(?: +(.*))?$ <function huserStart at 0x9239684>
+high ^\.(hivew)(?: +(.*))?$ <function hivewik at 0x9307c6c>
+low ^\.(tr)(?: +(.*))?$ <function tr2 at 0x92310d4>
+high QueenBee! <function interjection at 0x93c0ed4>
+low ^\.(yi)(?: +(.*))?$ <function yi at 0x91d1454>
+high ^\.(npl)(?: +(.*))?$ <function npl at 0x91d1ca4>
+medium ^\.(head)(?: +(.*))?$ <function head at 0x9231304>
+high .* <function responses at 0x928c79c>
+medium ^\.(wa)(?: +(.*))?$ <function wa at 0x93da064>
+high ^\.(wik)(?: +(.*))?$ <function wik at 0x93da33c>
+high ^\.(wiki)(?: +(.*))?$ <function wik at 0x93da33c>
+medium ^\.(c)(?: +(.*))?$ <function c at 0x93c6fb4>
+medium ^\.(search)(?: +(.*))?$ <function search at 0x9314b8c>
+medium ^\.(calc)(?: +(.*))?$ <function calc at 0x93c6f7c>
+low ^\.(beacon)(?: +(.*))?$ <function beacon at 0x93c648c>
+medium ^\.(dict)(?: +(.*))?$ <function encarta at 0x93c609c>
+low ^\.(stats)(?: +(.*))?$ <function stats at 0x93c6c6c>
+medium ^\.(color)(?: +(.*))?$ <function setColor at 0x9300e2c>
+low \.(me)\b(?: +(?:(#?\S+) (.+)))? <function me at 0x93da79c>
+medium ^\.(title)(?: +(.*))?$ <function f_title at 0x923141c>
+low (.*) <function f_note at 0x93c6294>
+medium .* <function husercount at 0x9239294>
+low ^\.(lusers)(?: +(.*))?$ <function luserStart at 0x923956c>
+high ^\.(g)(?: +(.*))?$ <function g at 0x9314a04>
+low ^\.(commands)(?: +(.*))?$ <function commands at 0x93c6dbc>
+medium ^\.(bing)(?: +(.*))?$ <function bing at 0x9314ae4>
+medium ^\.(bytes)(?: +(.*))?$ <function bytes at 0x918cd14>
+medium \.(weather)\b(?: +(?:(.*)))? <function f_weather at 0x930310c>
+medium ^\.(o)(?: +(.*))?$ <function o at 0x93da9cc>
+medium ^\.(ogc)(?: +(.*))?$ <function oldgc at 0x9314a3c>
+medium ^\.(oldgc)(?: +(.*))?$ <function oldgc at 0x9314a3c>
+medium ^\.(in)(?: +(.*))?$ <function remind at 0x931441c>
+low ^\.(part)(?: +(.*))?$ <function part at 0x93da6f4>
+medium ^\.(u)(?: +(.*))?$ <function u at 0x918ccdc>
+medium ^\.(w)(?: +(.*))?$ <function w at 0x93c6064>
+low QueenBee[,:] +(?i)(?:help|doc) +([A-Za-z]+)(?:\?+)?$ <function doc at 0x93c64c4>
+high ^\.(gc)(?: +(.*))?$ <function gc at 0x9314c6c>
+high \.(ety)\b(?: +(?:(.+?)$))? <function f_etymology at 0x928c6bc>
+medium ^\.(mangle)(?: +(.*))?$ <function mangle at 0x923110c>
+medium (?i)(hi|hello|hey) QueenBee[ \t]*$ <function hello at 0x92397d4>
+colors.py - shifting from 000000 to 00FF00
+colors.py - shifting from 00FF00 to 000000
+colors.py - shifting from 000000 to 00FF00
+colors.py - shifting from 00FF00 to 000000
+colors.py - shifting from 000000 to 00FF00
+colors.py - shifting from 00FF00 to 000000
+colors.py - shifting from 000000 to 00FF00
+colors.py - shifting from 00FF00 to 000000
+colors.py - shifting from 000000 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to FFFFFF
+colors.py - shifting from FFFFFF to FF0000
+colors.py - shifting from FF0000 to 00FFFF
+colors.py - shifting from 00FFFF to 00FF00
+colors.py - shifting from 00FF00 to 00FFFF
+colors.py - shifting from 00FFFF to ff6600
+colors.py - shifting from ff6600 to 00FF00
+colors.py - shifting from 00FF00 to ff6600
+colors.py - shifting from ff6600 to FF4F00
+colors.py - shifting from FF4F00 to FF4F00
+colors.py - shifting from FF4F00 to FF0000
+colors.py - shifting from FF0000 to 00FF00
+colors.py - shifting from 00FF00 to FF0000
+colors.py - shifting from FF0000 to ff0000
+colors.py - shifting from ff0000 to 00ff00
+colors.py - shifting from 00ff00 to 00FF00
+colors.py - shifting from 00ff00 to 0000ff
+colors.py - shifting from 00FF00 to 0000ff
+colors.py - shifting from 0000ff to ff0000
+colors.py - shifting from ff0000 to 00FF00
+colors.py - shifting from 00FF00 to ff0000
+colors.py - shifting from ff0000 to 0000ff
+colors.py - shifting from 0000ff to 00FF00
+colors.py - shifting from 00FF00 to 0000ff
+colors.py - shifting from 0000ff to 00FF00
+colors.py - shifting from 00FF00 to 0000ff
+colors.py - shifting from 0000ff to ff0000
+medium .* <function lusers at 0x9231fb4>
+low QueenBee[,:] +(?i)help(?:[?!]+)?$ <function help at 0x93c6d14>
+high ^\.(tock)(?: +(.*))?$ <function tock at 0x91d148c>
+medium ^\.(tw)(?: +(.*))?$ <function twitter at 0x9314144>
+medium ^\.(twitter)(?: +(.*))?$ <function twitter at 0x9314144>
+low (.*) <function startup at 0x93c0e9c>
+low ^\.(beats)(?: +(.*))?$ <function beats at 0x91d11ec>
+medium ^\.(t)(?: +(.*))?$ <function f_time at 0x91d1d4c>
+medium ^\.(duck)(?: +(.*))?$ <function duck at 0x9314b54>
+medium ^\.(ddg)(?: +(.*))?$ <function duck at 0x9314b54>
+medium \.(seen)\b(?: +(?:(\S+)))? <function seen at 0x93c6224>
+low (.*) <function message at 0x93da64c>
+low ^\.(quit)(?: +(.*))?$ <function quit at 0x93da72c>
+low QueenBee[,:] +(reload) +(\S+)? <function f_reload at 0x93141ec>
+medium ^\.(mail)(?: +(.*))?$ <function MailingList at 0x93c0d84>
+medium QueenBee[,:] +(tell) +(\S+) (.*) <function f_remind at 0x93da5dc>
+medium QueenBee[,:] +(ask) +(\S+) (.*) <function f_remind at 0x93da5dc>
+medium \.(val)\b(?: +(?:(?i)(\S+)))? <function val at 0x93da10c>
+high ^\.(ngc)(?: +(.*))?$ <function ngc at 0x9314c34>
+medium ^\.(suggest)(?: +(.*))?$ <function suggest at 0x9314bc4>
+medium ^\.(py)(?: +(.*))?$ <function py at 0x93da02c>
+low QueenBee[,:] +(?:([a-z]{2}) +)?(?:([a-z]{2}|en-raw) +)?["“](.+?)["”]\? *$ <function tr at 0x91d1e64>
+medium ^\.(snippet)(?: +(.*))?$ <function snippet at 0x93daa04>
+medium ^\.(gcs)(?: +(.*))?$ <function gcs at 0x9314a74>
+medium ^\.(comp)(?: +(.*))?$ <function gcs at 0x9314a74>
+low \.join (#\S+)(?: *(\S+))? <function join at 0x93da6bc>
+low .*(http[s]?://[^<> "\x01]+)[,.]? <function noteuri at 0x923195c>
+low .* <function huserSend at 0x92394c4>
+low \.(msg)\b(?: +(?:(#?\S+) (.+)))? <function msg at 0x93da764>
+low ^\.(huser)(?: +(.*))?$ <function huserStart at 0x9239684>
+high ^\.(hivew)(?: +(.*))?$ <function hivewik at 0x9307c6c>
+low ^\.(tr)(?: +(.*))?$ <function tr2 at 0x92310d4>
+high QueenBee! <function interjection at 0x93c0ed4>
+low ^\.(yi)(?: +(.*))?$ <function yi at 0x91d1454>
+high ^\.(npl)(?: +(.*))?$ <function npl at 0x91d1ca4>
+medium ^\.(head)(?: +(.*))?$ <function head at 0x9231304>
+high .* <function responses at 0x928c79c>
+medium ^\.(wa)(?: +(.*))?$ <function wa at 0x93da064>
+high ^\.(wik)(?: +(.*))?$ <function wik at 0x93da33c>
+high ^\.(wiki)(?: +(.*))?$ <function wik at 0x93da33c>
+medium ^\.(c)(?: +(.*))?$ <function c at 0x93c6fb4>
+medium ^\.(search)(?: +(.*))?$ <function search at 0x9314b8c>
+medium ^\.(calc)(?: +(.*))?$ <function calc at 0x93c6f7c>
+low ^\.(beacon)(?: +(.*))?$ <function beacon at 0x93c648c>
+medium ^\.(dict)(?: +(.*))?$ <function encarta at 0x93c609c>
+low ^\.(stats)(?: +(.*))?$ <function stats at 0x93c6c6c>
+medium ^\.(color)(?: +(.*))?$ <function setColor at 0x93c6a04>
+low \.(me)\b(?: +(?:(#?\S+) (.+)))? <function me at 0x93da79c>
+medium ^\.(title)(?: +(.*))?$ <function f_title at 0x923141c>
+low (.*) <function f_note at 0x93c6294>
+medium .* <function husercount at 0x9239294>
+low ^\.(lusers)(?: +(.*))?$ <function luserStart at 0x923956c>
+high ^\.(g)(?: +(.*))?$ <function g at 0x9314a04>
+low ^\.(commands)(?: +(.*))?$ <function commands at 0x93c6dbc>
+medium ^\.(bing)(?: +(.*))?$ <function bing at 0x9314ae4>
+medium ^\.(bytes)(?: +(.*))?$ <function bytes at 0x918cd14>
+medium \.(weather)\b(?: +(?:(.*)))? <function f_weather at 0x930310c>
+medium ^\.(o)(?: +(.*))?$ <function o at 0x93da9cc>
+medium ^\.(ogc)(?: +(.*))?$ <function oldgc at 0x9314a3c>
+medium ^\.(oldgc)(?: +(.*))?$ <function oldgc at 0x9314a3c>
+medium ^\.(in)(?: +(.*))?$ <function remind at 0x931441c>
+low ^\.(part)(?: +(.*))?$ <function part at 0x93da6f4>
+medium ^\.(u)(?: +(.*))?$ <function u at 0x918ccdc>
+medium ^\.(w)(?: +(.*))?$ <function w at 0x93c6064>
+low QueenBee[,:] +(?i)(?:help|doc) +([A-Za-z]+)(?:\?+)?$ <function doc at 0x93c64c4>
+high ^\.(gc)(?: +(.*))?$ <function gc at 0x9314c6c>
+high \.(ety)\b(?: +(?:(.+?)$))? <function f_etymology at 0x928c6bc>
+medium ^\.(mangle)(?: +(.*))?$ <function mangle at 0x923110c>
+medium (?i)(hi|hello|hey) QueenBee[ \t]*$ <function hello at 0x92397d4>
+colors.py - shifting from 000000 to 0000ff
+colors.py - shifting from 0000ff to 00FF00
+colors.py - shifting from 00FF00 to 0000ff
+colors.py - shifting from 0000ff to 00FF00
+colors.py - shifting from 00FF00 to 0000ff
+colors.py - shifting from 0000ff to FF0000
+colors.py - shifting from FF0000 to FFFFFF
+colors.py - shifting from FFFFFF to 000000
+colors.py - shifting from 000000 to FFFFFF
+colors.py - shifting from FFFFFF to 000000
+colors.py - shifting from 000000 to 00FF00
+colors.py - shifting from 00FF00 to 000000
+colors.py - shifting from 000000 to FFFFFF
+colors.py - shifting from FFFFFF to 00FF00
+colors.py - shifting from 00FF00 to FFFFFF
+colors.py - shifting from FFFFFF to FF0000
+colors.py - shifting from FF0000 to 00FF00
+colors.py - shifting from 00FF00 to FF0000
+colors.py - shifting from FF0000 to 00FF00
+colors.py - shifting from 00FF00 to FF0000
+colors.py - shifting from FF0000 to 00FF00
+colors.py - shifting from 00FF00 to FF0000
+colors.py - shifting from FF0000 to 00FF00
+colors.py - shifting from 00FF00 to FF0000
+colors.py - shifting from FF0000 to 00FF00
+colors.py - shifting from 00FF00 to FF0000
+colors.py - shifting from FF0000 to 00FF00
+colors.py - shifting from 00FF00 to FF0000
+colors.py - shifting from FF0000 to 00FF00
+colors.py - shifting from 00FF00 to FF0000
+colors.py - shifting from FF0000 to 00FF00
+colors.py - shifting from 00FF00 to FF0000
+colors.py - shifting from FF0000 to 00FF00
+colors.py - shifting from 00FF00 to FF0000
+colors.py - shifting from FF0000 to 00FF00
+colors.py - shifting from 00FF00 to FF0000
+colors.py - shifting from FF0000 to 00FF00
+colors.py - shifting from 00FF00 t

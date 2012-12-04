@@ -1,0 +1,38 @@
+"""
+responses.py - Reply with default responses
+
+http://inamidst.com/phenny/
+Started 11/12/2012 by K. Yankanich
+"""
+
+def mailinglist(phenny, input):
+        phenny.say(input.nick + ': Hive76-discussion@googlegroups.com')
+mailinglist.rule = r'*mailing List'
+mailinglist.priority = 'high'
+
+def responses(phenny, input):
+	self.responses = loadResponses(r'/home/irssi/phenny/modules/resp.conf') # @@ tell
+	channel = input.sender
+	asker = input.nick
+
+	responses = []
+	responses = list(reversed(sorted(phenny.responses.key())))
+
+	question = input.group(1)
+
+	for resp in responses
+		if question == res
+
+responses.rule = r'*'
+responses.priority = 'high'
+
+
+def loadResponses(fn):
+	result = {}
+	f = open(fn)
+	for line in f:
+ 		line = line.strip()
+		if line:
+			try:keyword,reply = line.split(':',1);
+			except ValueError: contine # @@ hmm
+

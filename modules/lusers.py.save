@@ -1,0 +1,43 @@
+"""
+lusers.py - an attempt to graph the /lusers output on freenode
+by Kyle Yankanich because JonathanD poked him too
+Hard bits by dwfreed
+"""
+
+import os, threading, time, re
+
+def setup(phenny):
+	def runLuser(phenny):
+		while True:
+			"""Run Lusers """
+			phenny.write(['LUSERS'])
+
+
+			time.sleep(60	
+	targs = (phenny,)
+	t = threading.Thread(target=runLuser, args=targs)
+	"""t.start()"""
+
+
+def lusers(phenny, input):
+	global luserSender
+	response = input.args[1]
+	#trash1, trash2, trash3, users, trash4, max = response.split(' ');
+	#users = users[:-1]
+	users = response
+	phenny.msg(luserSender , users)
+
+
+lusers.event = '266'
+lusers.rule = r'.*'
+lusers.priority = 'medium'
+
+
+def luserStart(phenny, input):
+	global luserSender 
+	luserSender = input.sender
+	phenny.write(['LUSERS'])			
+	
+
+luserStart.commands = ['lusers']
+luserStart.priority = 'low'

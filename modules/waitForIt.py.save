@@ -1,0 +1,33 @@
+#!/usr/bin/env python
+"""
+waitForIt.py - Phenny threading module
+ designed to wait for an input from a file, or a serial connection
+ and respond approrirately
+"""
+
+import os, threading, time, re
+
+def setup(phenny):
+	def monitor (phenny):
+		file = '/home/irssi/tester'
+		time.sleep(5)
+		while True:
+			if os.path.isfile(file) and os.path.exists(file):
+				phenny.msg('#hive76bots', r'~/tester exists!')
+				try: 
+					os.remove(file)
+				except OSError:
+					phenny.msg('#hive76bots', 'Cant remove tester!')
+		
+
+	targs = (phenny,)
+	t = threading.Thread(target=monitor, args=targs)
+	t.start()
+
+
+
+""" this is just here to make sure the code compiles"""
+def LEDon(phenny, input):
+ led = 1
+
+LEDon.commands = ['thr']

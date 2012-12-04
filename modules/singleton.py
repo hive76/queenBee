@@ -1,0 +1,14 @@
+lusersThread = None
+lusersPlzStop = False
+eventsThread = None
+eventsPlzStop = False
+twitterThread = None
+twitterPlzStop = False
+remindThread = None
+remindPlzStop = False
+monitorArduinoThread = None
+monitorArduinoPlzStop = False
+hive76groupThread = None
+hive76groupPlzStop = False
+beaconThread = None
+beaconPlzStop = False
