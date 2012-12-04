@@ -1,3 +1,11 @@
+"""
+ArduinoProbe.py - Kyle Yankanich
+This script is designed to monitor an arduino running Firmata
+for a button press, and update beaconFile with the 
+current timestamp when it is pressed
+
+"""
+
 import time, web
 from firmata import *
 
