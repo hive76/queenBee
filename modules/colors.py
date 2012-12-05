@@ -20,11 +20,29 @@ a.pin_mode(6, firmata.PWM) #red
 def setup(phenny):
 	def beaconHome(phenny):
 		while True:
-			x = 1
+			b = open('/home/irrsi/phenny/beacon.info', "r")
+			message = b.readlines()
+			b.close()
+
+			f = open('/home/irssi/phenny/beacon.info', "w")
+			f.write(message[0])
+			print message[0]
+			f.write("\n")
+			f.write(message[1])
+			f.write("\n")
+			f.write(message[2])
+			f.write("\n")
+			f.write(message[3])
+			f.write("\n")
+			f.write(c.currentColor)
+			f.write("\n")
+			f.close()
+
+			time.sleep(10)
+
 			call(["scp", "/home/irssi/phenny/beacon.info", "wwwPush@belafonte.us:/home/wwwPush/beacon.info"])
 
-
-			time.sleep(45)
+			time.sleep(35)
 
 
 	targs = (phenny,)
