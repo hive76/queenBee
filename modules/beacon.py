@@ -18,12 +18,19 @@ a.delay(2)
 
 global beaconDelay
 beaconDelay = 3600
+
 global beaconFile
 beaconFile = '/home/irssi/beacon'
+
 global beaconURL
 beaconURL = r'http://beacon.hive76.org/index.php?status='
+
 global beaconStatus
 
+global broadcast
+
+global broadcastFile
+broadcastFile = '/home/irssi/phenny/beacon.info'
 
 
 def setup(phenny):
@@ -110,3 +117,59 @@ def beacon(phenny, input):
 			
 beacon.commands = ['beacon']
 beacon.priority = 'low'
+
+
+
+def broadcast(phenny, input):
+	global broadcast
+	if not input.member and  input.group(2):
+		phenny.reply("This function reserved for member use only")
+		return()
+
+	if not input.group(2):
+		phenny.reply("Current Message: " + broadcast);
+		return()
+
+	if len(input.group(2)) >= 80:
+		phenny.reply("That message too long!")
+		return()
+	broadcast = []
+	broadcast = input.group(2).split(" ")
+	message = ["", "", "", "", "", "", "" ]
+
+	i = 0
+	count = 0
+	for word in broadcast:
+		while len(word)>20:
+			message[i] = "".join(word[0:20])
+			word = word[20:80]
+			i = i + 1
+			count = 0
+		if (len(word) + count) <= 20:
+			count = count + len(word) + 1
+			message[i] = message[i] + word + " "
+		else:
+			i = i + 1
+			count = len(word) + 1
+			if len(word) > 20:
+				count = 0
+			else:
+				message[i] = word + " "
+
+
+	f = open(broadcastFile, 'w')
+	f.write("\n".join(message[0:4]))
+	f.write("\n")
+	
+	f.write(c.currentColor)
+	f.write("\n");
+
+	f.close()	
+	
+	broadcast = " ".join(message[0:4])
+	phenny.reply("Sending out new broadcast")
+
+
+broadcast.commands = ['broadcast']
+broadcast.priority = 'medium'
+broadcast.threading = True

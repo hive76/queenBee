@@ -12,3 +12,5 @@ hive76groupThread = None
 hive76groupPlzStop = False
 beaconThread = None
 beaconPlzStop = False
+beaconHomeThread = None
+beaconHomePlzStop = False

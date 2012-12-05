@@ -3,7 +3,8 @@ colors.py - Phenny RGB Arduino Firmata module
 
 Kyle Yankanich
 """
-import time, threading, sys
+import time, threading, sys, singleton
+from subprocess import call
 from firmata import *
 
 sys.path.insert(0, '/home/irssi/phenny/modules/')
@@ -15,6 +16,29 @@ a = Arduino('/dev/ttyUSB0')
 a.pin_mode(3, firmata.PWM) #blue
 a.pin_mode(5, firmata.PWM) #green
 a.pin_mode(6, firmata.PWM) #red
+
+def setup(phenny):
+	def beaconHome(phenny):
+		while True:
+			x = 1
+			call(["scp", "/home/irssi/phenny/beacon.info", "wwwPush@belafonte.us:/home/wwwPush/beacon.info"])
+
+
+			time.sleep(45)
+
+
+	targs = (phenny,)
+	if singleton.beaconHomeThread is not None and singleton.beaconHomeThread.isAlive():
+		singleton.beaconHomePlzStop = True
+		singleton.beaconHomeThread.join()
+		while singleton.beaconHomeThread.isAlive():
+			singleton.beaconHomeThread.join()
+		singleton.beaconHomePlzStop = False
+	singleton.beaconHomeThread = threading.Thread(target=beaconHome, args = targs)
+	singleton.beaconHomeThread.start()
+
+
+
 
 def LEDShift(arduino, fromColor, toColor, timeShift):
 	
@@ -117,3 +141,7 @@ def setColor(phenny, input):
 setColor.commands = ['color']
 setColor.priority = 'medium'
 setColor.threading = 'True'
+
+
+
+
