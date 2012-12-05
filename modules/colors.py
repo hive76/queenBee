@@ -10,6 +10,15 @@ from firmata import *
 sys.path.insert(0, '/home/irssi/phenny/modules/')
 import currentColor as c
 
+global broadcastFile
+broadcastFile = '/home/irssi/phenny/beacon.info'
+
+global beaconFile
+beaconFile = '/home/irssi/beacon'
+
+global beaconDelay
+beaconDelay = 3600
+
 
 global a
 a = Arduino('/dev/ttyUSB0')
@@ -20,27 +29,41 @@ a.pin_mode(6, firmata.PWM) #red
 def setup(phenny):
 	def beaconHome(phenny):
 		while True:
-			b = open('/home/irrsi/phenny/beacon.info', "r")
+			#print "inside beaconHome"
+			b = open(broadcastFile, "r")
 			message = b.readlines()
 			b.close()
+			
+			bf = open(beaconFile, "r")
+			activated = int(bf.read())
+			bf.close()
+			if (int(activated) + beaconDelay) > int(time.time()):
+				beaconStatus = "True"
+			else:
+				beaconStatus = "False"
 
-			f = open('/home/irssi/phenny/beacon.info', "w")
+
+			f = open(broadcastFile, "w")
 			f.write(message[0])
-			print message[0]
-			f.write("\n")
+			#print message[0]
+			#f.write("\n")
 			f.write(message[1])
-			f.write("\n")
+			#f.write("\n")
 			f.write(message[2])
-			f.write("\n")
+			#f.write("\n")
 			f.write(message[3])
-			f.write("\n")
+			#f.write("\n")
 			f.write(c.currentColor)
+			f.write("\n")
+			f.write(beaconStatus)
+			f.write("\n")
+			f.write("EOF")
 			f.write("\n")
 			f.close()
 
-			time.sleep(10)
+			time.sleep(1)
 
-			call(["scp", "/home/irssi/phenny/beacon.info", "wwwPush@belafonte.us:/home/wwwPush/beacon.info"])
+			call(["rsync", "/home/irssi/phenny/beacon.info", "wwwPush@belafonte.us:/home/wwwPush/beacon.info"])
 
 			time.sleep(35)
 
@@ -90,7 +113,7 @@ def LEDShift(arduino, fromColor, toColor, timeShift):
 		a.analog_write(5, fromgreen)
 		a.analog_write(3, fromblue)
 	
-		for i in range (0, steps):
+		for i in range (0, int(steps)):
 			#print i
 
 			newred = fromred + (redsteps * i) * 1.0	
